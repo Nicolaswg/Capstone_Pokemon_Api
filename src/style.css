@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+  --background-color: #fff;
+  --color-ligth-gray: #dbdada;
+  --font-color: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo {
+  background: url('/src/img/pokemonLogo.png');
+  width: 100px;
+  height: 80px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 20px;
+  flex-grow: 2;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.nav-bar li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--font-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-link {
+  transition: color ease 600ms, font-size ease 600ms;
+}
+
+.nav-link:hover {
+  color: rgb(30, 188, 199);
+  font-size: 1.5rem;
+  text-shadow: 14px 8px 9px #dbdada;
+}
+
+.main {
+  width: 100%;
+  height: 80vh;
+  padding: 10px;
+}
+
+.footer {
+  width: 100%;
+  height: 10vh;
+  padding: 10px;
+  background: var(--color-ligth-gray);
+  border-top: 3px solid var(--font-color);
+}
+
+.footer p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+}
