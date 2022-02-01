@@ -11,7 +11,7 @@
     "style": "npx stylelint \"**/*.{css,scss}\"",
     "stylef": "npx stylelint --fix \"**/*.{css,scss}\"",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --config webpack.config.js",
+    "start": "webpack serve --open",
     "build": "webpack --config webpack.config.js"
   },
   "repository": {
@@ -21,9 +21,6 @@
   "keywords": [],
   "author": "reem",
   "license": "MIT",
-  "bugs": {
-    "url": ""
-  },
   "homepage": "",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.16.8",
