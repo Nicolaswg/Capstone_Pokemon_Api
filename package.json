@@ -26,6 +26,7 @@
   },
   "homepage": "",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.5.1",
     "eslint": "^7.32.0",
@@ -50,9 +51,9 @@
     "jsdom": "^19.0.0",
     "lodash": "^4.17.21"
   },
-  "main": "webpack.config.js", 
-   "jest": {
+  "main": "webpack.config.js",
+  "jest": {
     "verbose": true,
     "testURL": "http://localhost/"
-   }
+  }
 }
