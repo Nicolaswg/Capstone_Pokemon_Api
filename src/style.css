@@ -183,7 +183,7 @@
   margin-left: 50px;
 }
 
-.description{
+.description {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -231,7 +231,6 @@
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 5;
-
 }
 
 .form {
@@ -250,10 +249,9 @@
 .label2 {
   font-size: 22px;
   font-weight: bold;
-   margin-left: 50px;
-   margin-top: 10px;
+  margin-left: 50px;
+  margin-top: 10px;
 }
-
 
 .input-name,
 .input-area {
@@ -264,7 +262,6 @@
   width: 200px;
   height: 8px;
 }
-
 
 .input-name:focus {
   outline: none;

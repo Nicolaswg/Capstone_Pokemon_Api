@@ -25,15 +25,15 @@ const pokeCard = (pokeArr) => {
      </div>`;
     pokedex.innerHTML = pokeHTML;
 
-      });
-      const commentBtn = document.querySelectorAll('.com-btn');
-           for(let i = 0; i < commentBtn.length; i += 1){
-                 commentBtn[i].addEventListener('click', () => {
-                  comPopUp(pokeArr, i);
-                 });
-           };
-   
-           return pokeArr;
+    return pokeArr;
+  });
+  const commentBtn = document.querySelectorAll('.com-btn');
+  for (let i = 0; i < commentBtn.length; i += 1) {
+    commentBtn[i].addEventListener('click', () => {
+      comPopUp(pokeArr, i);
+    });
+  }
+
+  // return pokeArr;
 };
 export { displayHeader, pokeCard };
-

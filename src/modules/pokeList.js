@@ -1,5 +1,5 @@
 class List {
     static pokeList = [];
- }
- 
- export default List;
+}
+
+export default List;

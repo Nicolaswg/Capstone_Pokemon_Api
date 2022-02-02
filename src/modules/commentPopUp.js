@@ -1,15 +1,14 @@
 // const { DateTime } = require('luxon');
 
+const comPopUp = (pokemon, i) => {
+  const parent = document.createElement('div');
+  parent.classList.add('modal-bg');
+  parent.classList.add('overlay');
+  const commentContainer = document.createElement('div');
+  commentContainer.classList.add('com-contain');
 
-const comPopUp = (pokemon, i) => {   
-const parent = document.createElement('div'); 
-parent.classList.add('modal-bg');
-parent.classList.add('overlay');
-const commentContainer = document.createElement('div');
-commentContainer.classList.add('com-contain');
-
-   let commentHtml = '';
-    commentHtml += `<section class="coment-sec">
+  let commentHtml = '';
+  commentHtml += `<section class="coment-sec">
     <button class="close-popUp">X</button>
     <div class="img-div-contain">
        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon[i].id}.png" class="poke-img"> 
@@ -33,19 +32,17 @@ commentContainer.classList.add('com-contain');
             </form>
         </div>
     </div>
-    </section>`
+    </section>`;
 
-    commentContainer.innerHTML = commentHtml;
-    parent.appendChild(commentContainer);
-    document.body.appendChild(parent);
-  
-   const btnClose = document.querySelector('.close-popUp');
+  commentContainer.innerHTML = commentHtml;
+  parent.appendChild(commentContainer);
+  document.body.appendChild(parent);
 
-   btnClose.addEventListener('click', () => {
+  const btnClose = document.querySelector('.close-popUp');
+
+  btnClose.addEventListener('click', () => {
     parent.remove();
-   })
-    
+  });
 };
 
- export default comPopUp;
-
+export default comPopUp;

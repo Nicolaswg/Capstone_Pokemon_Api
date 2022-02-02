@@ -1,6 +1,7 @@
 /* eslint-disable no-await-in-loop */
 import List from './pokeList.js';
 import { pokeCard } from './displayHome.js';
+
 const pokemonNumber = 2;
 const pokemonList = async () => {
   for (let i = 1; i <= pokemonNumber; i += 1) {
