@@ -1,4 +1,5 @@
 import comPopUp from './commentPopUp.js';
+import {postLike, getLike} from './likeApi.js';
 
 const header = document.querySelector('.header');
 const pokedex = document.getElementById('pokedex');
