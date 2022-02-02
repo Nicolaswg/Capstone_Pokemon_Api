@@ -27,13 +27,17 @@ const pokeCard = (pokeArr) => {
 
     return pokeArr;
   });
+  const likes = document.querySelectorAll('.lk');
+  likes.forEach((like, i) => {
+    like.addEventListener('click', () => {
+      postLike(i);
+    });
+  });
   const commentBtn = document.querySelectorAll('.com-btn');
-  for (let i = 0; i < commentBtn.length; i += 1) {
+  commentBtn.forEach((e, i) => {
     commentBtn[i].addEventListener('click', () => {
       comPopUp(pokeArr, i);
     });
-  }
-
-  // return pokeArr;
+  });
 };
 export { displayHeader, pokeCard };
