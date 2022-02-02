@@ -147,3 +147,136 @@
   font-family: 'Roboto', sans-serif;
   align-items: center;
 }
+
+.hidden {
+  display: none;
+}
+
+.com-contain {
+  background-color: var(--color-ligth-gray);
+  border-radius: 25px;
+}
+
+.close-popUp {
+  margin-left: 270px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-div-contain {
+  width: 150px;
+  height: 150px;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  margin-left: 50px;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.description p {
+  font-family: monospace;
+  font-size: 15px;
+}
+
+/* .comments {
+  background-color: #eee;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 150px;
+  margin-left: 30px;
+  overflow-y: scroll;
+} */
+
+/* .comment {
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #ccc;
+} */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.label {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.label2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.input-name,
+.input-area {
+  padding: 10px;
+  border: 2px solid rgb(10, 9, 9);
+  border-radius: 6px;
+  flex: 1;
+  width: 200px;
+  height: 8px;
+}
+
+.input-name:focus {
+  outline: none;
+}
+
+.input-area:focus {
+  outline: none;
+}
+
+.btn {
+  border-left: 3px black;
+  border-top: 3px black;
+  padding: 10px;
+  border-radius: 6px;
+  margin-left: 110px;
+  cursor: pointer;
+  width: 75px;
+}
