@@ -1,7 +1,6 @@
 /* eslint-disable no-await-in-loop */
 import List from './pokeList.js';
 import { displayHeader, pokeCard } from './displayHome.js';
-// import { postLike } from './likeApi.js';
 
 const pokemonNumber = 13;
 const pokemonList = async () => {
@@ -10,7 +9,6 @@ const pokemonList = async () => {
     const res = await fetch(url);
     const pokemon = await res.json();
     List.pokeList.push(pokemon);
-    // postLike(i);
   }
   pokeCard(List.pokeList);
   displayHeader(List.pokeList);

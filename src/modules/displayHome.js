@@ -5,6 +5,7 @@ import itemCount from './counters.js';
 const header = document.querySelector('.header');
 const pokedex = document.getElementById('pokedex');
 const displayHeader = (arr) => {
+  console.log(arr);
   const pokeNum = itemCount(arr);
   const html = `<div class="logo"></div><ul class="nav-bar"><li><a href="#" class="nav-link">Pokemons (${pokeNum})</a></li><li><a href="#" class="nav-link">Game List</a></li><li><a href="#"class="nav-link">Players</a></li></ul>`;
   header.innerHTML = html;
@@ -29,10 +30,10 @@ const pokeCard = async (pokeArr) => {
       </div>`;
     pokedex.innerHTML = pokeHTML;
   });
-  // console.log(pokeArr);
+
   const likes = document.querySelectorAll('.lk');
   const sapns = document.querySelectorAll('.lk-counter');
-  // console.log(likes);
+
   likes.forEach((like, i) => {
     like.addEventListener('click', async () => {
       sapns[i].textContent = Number(sapns[i].textContent) + 1;
@@ -65,6 +66,5 @@ const pokeCard = async (pokeArr) => {
       });
     });
   });
-  // const pokeName = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
 };
 export { displayHeader, pokeCard };

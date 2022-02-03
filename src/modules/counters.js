@@ -1,6 +1,3 @@
-const itemCount = (arr) => {
-  const size = arr.length;
-  return size;
-};
+const itemCount = (arr) => arr.length;
 
 export default itemCount;
