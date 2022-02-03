@@ -5,7 +5,6 @@ import itemCount from './counters.js';
 const header = document.querySelector('.header');
 const pokedex = document.getElementById('pokedex');
 const displayHeader = (arr) => {
-  console.log(arr);
   const pokeNum = itemCount(arr);
   const html = `<div class="logo"></div><ul class="nav-bar"><li><a href="#" class="nav-link">Pokemons (${pokeNum})</a></li><li><a href="#" class="nav-link">Game List</a></li><li><a href="#"class="nav-link">Players</a></li></ul>`;
   header.innerHTML = html;
