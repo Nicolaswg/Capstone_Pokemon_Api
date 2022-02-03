@@ -9,23 +9,12 @@ const displayHeader = () => {
   header.innerHTML = html;
 };
 
-const pokeCard = (pokeArr) => {
+const pokeCard = async (pokeArr) => {
   let pokeHTML = '';
+  const lkNum = await getLike();
   pokeArr.map((e, i) => {
-    pokeHTML += `<div class="pokemon">
-    <div class="img-container">
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokeArr[i].id}.png" class="poke-img">
-    </div>
-    <div class="poke-title"><p class="poke-name">${pokeArr[i].name}</p><i class="far fa-heart"></i>
-    </div>
-    <div class="poke-like"><p class="likes">Likes</p>
-    </div>
-    <div class="btn-container">
-    <button class="com-btn">Comments</button>
-     </div>
-     </div>`;
+    pokeHTML += `<div class="pokemon"><div class="img-container"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokeArr[i].id}.png" class="poke-img"></div><div class="poke-title"><p class="poke-name">${pokeArr[i].name}</p><i class="far fa-heart lk"></i></div><div class="poke-like"><p class="likes"><span class ="lk-counter">${lkNum[i].likes}</span>Likes</p></div><div class="btn-container"><button class="com-btn">Comments</button></div></div>`;
     pokedex.innerHTML = pokeHTML;
-
     return pokeArr;
   });
   const likes = document.querySelectorAll('.lk');
@@ -40,5 +29,6 @@ const pokeCard = (pokeArr) => {
       comPopUp(pokeArr, i);
     });
   });
+  // const pokeName = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
 };
 export { displayHeader, pokeCard };

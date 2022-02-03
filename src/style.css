@@ -108,6 +108,7 @@
 
 .far.fa-heart {
   font-size: var(--font-title-size);
+  cursor: pointer;
 }
 
 .poke-like {
