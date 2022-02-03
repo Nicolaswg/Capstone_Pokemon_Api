@@ -48,10 +48,12 @@ const pokeCard = async (pokeArr) => {
       const pokId = e.target.parentNode.parentNode.id;
       comPopUp(pokeArr, i, pokId);
 
-      document.querySelector('.counter').textContent = await getCounter(pokId);
+      // document.querySelector('.counter').textContent = getCounter(pokId);
 
       const commentDiv = document.querySelector('.comments');
       const comments = await getCommentArr(pokId);
+
+      document.querySelector('.counter').textContent = getCounter(comments);
 
       comments.forEach((elemnt) => {
         const div = document.createElement('div');
