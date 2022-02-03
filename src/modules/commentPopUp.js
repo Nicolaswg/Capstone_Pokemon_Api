@@ -20,12 +20,11 @@ const addCommentToArray = async (id, nametTxt, commentArea) => {
 };
 
 const getCounter = async (comId) => {
-   const resolve = await getCommentArr(comId);
+  const resolve = await getCommentArr(comId);
   return resolve.length;
-}
+};
 
 const comPopUp = (pokemon, i, pokId) => {
-
   const parent = document.createElement('div');
   parent.classList.add('modal-bg');
   parent.classList.add('overlay');
@@ -59,25 +58,25 @@ const comPopUp = (pokemon, i, pokId) => {
       ></form>
       </div>
       </div>
-      </section>`; 
-      
+      </section>`;
+
   commentContainer.innerHTML = commentHtml;
   parent.appendChild(commentContainer);
-  document.body.appendChild(parent); 
-  
+  document.body.appendChild(parent);
+
   const btnClose = document.querySelector('.close-popUp');
-  
+
   btnClose.addEventListener('click', () => {
     parent.remove();
-  }); 
-  
+  });
+
   const inputName = document.querySelector('.input-name');
   const inputArea = document.querySelector('.input-area');
   const formDiv = document.querySelectorAll('.form');
-  const commentDiv = document.querySelector('.comments'); 
-  const counterCom = document.querySelector('.counter')
-  
- async function displayComments(comments) {
+  const commentDiv = document.querySelector('.comments');
+  const counterCom = document.querySelector('.counter');
+
+  async function displayComments(comments) {
     commentDiv.innerHTML = '';
     counterCom.textContent = await getCounter(pokId);
 
@@ -102,7 +101,6 @@ const comPopUp = (pokemon, i, pokId) => {
   };
 
   for (let i = 0; i < formDiv.length; i += 1) {
-
     formDiv[i].addEventListener('submit', (e) => {
       e.preventDefault();
 
@@ -119,5 +117,4 @@ const comPopUp = (pokemon, i, pokId) => {
   }
 };
 
-
-export {comPopUp, getCounter, getCommentArr};
+export { comPopUp, getCounter, getCommentArr };
