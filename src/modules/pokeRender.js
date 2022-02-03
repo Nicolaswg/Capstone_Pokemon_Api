@@ -1,6 +1,6 @@
 /* eslint-disable no-await-in-loop */
 import List from './pokeList.js';
-import { pokeCard } from './displayHome.js';
+import { displayHeader, pokeCard } from './displayHome.js';
 
 const pokemonNumber = 9;
 const pokemonList = async () => {
@@ -11,6 +11,7 @@ const pokemonList = async () => {
     List.pokeList.push(pokemon);
   }
   pokeCard(List.pokeList);
+  displayHeader(List.pokeList);
   return List.pokeList;
 };
 

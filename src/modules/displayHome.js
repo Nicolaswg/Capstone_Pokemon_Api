@@ -1,11 +1,12 @@
 import comPopUp from './commentPopUp.js';
 import { postLike, getLike } from './likeApi.js';
+import itemCount from './counters.js';
 
 const header = document.querySelector('.header');
 const pokedex = document.getElementById('pokedex');
-const pokemonNumber = 150;
-const displayHeader = () => {
-  const html = `<div class="logo"></div><ul class="nav-bar"><li><a href="#" class="nav-link">Pokemons (${pokemonNumber})</a></li><li><a href="#" class="nav-link">Game List</a></li><li><a href="#"class="nav-link">Players</a></li></ul>`;
+const displayHeader = (arr) => {
+  const pokeNum = itemCount(arr);
+  const html = `<div class="logo"></div><ul class="nav-bar"><li><a href="#" class="nav-link">Pokemons (${pokeNum})</a></li><li><a href="#" class="nav-link">Game List</a></li><li><a href="#"class="nav-link">Players</a></li></ul>`;
   header.innerHTML = html;
 };
 const pokeCard = async (pokeArr) => {
