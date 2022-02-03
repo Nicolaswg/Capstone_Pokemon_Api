@@ -19,9 +19,9 @@ const addCommentToArray = async (id, nametTxt, commentArea) => {
   });
 };
 
-const getCounter = async (comId) => {
-  const resolve = await getCommentArr(comId);
-  return resolve.length;
+const getCounter = (comId) => {
+  const resolve = comId.length;
+  return resolve;
 };
 
 const comPopUp = (pokemon, i, pokId) => {
@@ -76,9 +76,9 @@ const comPopUp = (pokemon, i, pokId) => {
   const commentDiv = document.querySelector('.comments');
   const counterCom = document.querySelector('.counter');
 
-  async function displayComments(comments) {
+  function displayComments(comments) {
     commentDiv.innerHTML = '';
-    counterCom.textContent = await getCounter(pokId);
+    counterCom.textContent = getCounter(comments);
 
     comments.forEach((elemnt) => {
       const div = document.createElement('div');
