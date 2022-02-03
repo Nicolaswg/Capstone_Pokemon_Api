@@ -29,10 +29,10 @@ const pokeCard = async (pokeArr) => {
       </div>`;
     pokedex.innerHTML = pokeHTML;
   });
-  // console.log(pokeArr);
+
   const likes = document.querySelectorAll('.lk');
   const sapns = document.querySelectorAll('.lk-counter');
-  // console.log(likes);
+
   likes.forEach((like, i) => {
     like.addEventListener('click', async () => {
       sapns[i].textContent = Number(sapns[i].textContent) + 1;
@@ -65,6 +65,5 @@ const pokeCard = async (pokeArr) => {
       });
     });
   });
-  // const pokeName = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
 };
 export { displayHeader, pokeCard };
