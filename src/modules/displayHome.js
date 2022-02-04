@@ -37,8 +37,6 @@ const pokeCard = async (pokeArr) => {
     like.addEventListener('click', async () => {
       sapns[i].textContent = Number(sapns[i].textContent) + 1;
       await postLike(i);
-      const lk = await getLike();
-      document.querySelector('.lk-counter').textContent = lk[i].likes;
     });
   });
 
