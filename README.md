@@ -8,7 +8,6 @@
 > This project is JavaScript web application, Made with vanilla HTML,CSS and JavScript, The topic about POKEMONS so we get pokemons from API and display it with the ability to Add your insights in any pokemon you want. 🌌🦎🤓
 
 
-<video src="Pokemon-AP-video.mp4" width="70%"></video>
 
 ## Built With
 
@@ -24,6 +23,10 @@
  ## Live Demo
 
 [See My project Live here]() 
+
+## Video of Project
+
+[See My project video here](https://www.loom.com/share/3eb95a2d0dc3493b899a3fbb173aa34d)
 
 
 ## Authors
