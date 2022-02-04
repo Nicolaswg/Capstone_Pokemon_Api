@@ -27,24 +27,23 @@ const getCounter = (comId) => {
 const comPopUp = (pokemon, i, pokId) => {
   const parent = document.createElement('div');
   parent.classList.add('modal-bg');
-  parent.classList.add('overlay');
 
   const commentContainer = document.createElement('div');
   commentContainer.classList.add('com-contain'); let commentHtml = '';
 
-  commentHtml += `<section class="coment-sec" >
+  commentHtml += `
   <button class="close-popUp">X</button>
   <div class="img-div-contain">
   <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon[i].id}.png" class="poke-img">
   </div>
   <div class="description">
-     <p>weight: ${pokemon[i].weight}</p>
-     <p>height: ${pokemon[i].height}</p>
+     <p>weight: ${pokemon[i].weight} kg</p>
+     <p>height: ${pokemon[i].height} m</p>
      <p>species: ${pokemon[i].species.name}</p>
      <p>type: ${pokemon[i].types[0].type.name}</p>
      </div>
      <div>
-     <p class="label2"> Comments (<span class="counter"> </span>)</p>
+     <p class="label2"> All the Comments [<span class="counter"> </span>]</p>
      <div class="comments">
      
      </div>
@@ -57,8 +56,7 @@ const comPopUp = (pokemon, i, pokId) => {
       <button class="btn" type="submit">Comment</button
       ></form>
       </div>
-      </div>
-      </section>`;
+      </div>`;
 
   commentContainer.innerHTML = commentHtml;
   parent.appendChild(commentContainer);

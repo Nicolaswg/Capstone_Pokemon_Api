@@ -33,12 +33,10 @@ const pokeCard = async (pokeArr) => {
   const likes = document.querySelectorAll('.lk');
   const sapns = document.querySelectorAll('.lk-counter');
 
-  likes.forEach((like, i) => {
+  likes.forEach(async (like, i) => {
     like.addEventListener('click', async () => {
       sapns[i].textContent = Number(sapns[i].textContent) + 1;
       await postLike(i);
-      const lk = await getLike();
-      document.querySelector('.lk-counter').textContent = lk[i].likes;
     });
   });
 
