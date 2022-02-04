@@ -7,7 +7,8 @@
 
 > This project is JavaScript web application, Made with vanilla HTML,CSS and JavScript, The topic about POKEMONS so we get pokemons from API and display it with the ability to Add your insights in any pokemon you want. 🌌🦎🤓
 
-<img src="Capture.PNG" width="70%" />
+
+<video src="Pokemon-AP-video.mp4" width="70%"></video>
 
 ## Built With
 
