@@ -29,7 +29,7 @@ https://user-images.githubusercontent.com/73354132/152538131-0c4c1c12-cb34-4448-
 
 
 
-[See My project Live here](https://nicolaswg.github.io/Capstone_Pokemon_Api/) 
+[See My project Live here](https://capstone-pokemon.netlify.app) 
 
 ## Video of Project
 
